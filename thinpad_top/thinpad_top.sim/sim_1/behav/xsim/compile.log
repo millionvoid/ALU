@@ -1,0 +1,58 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Xilinx_pro/ALU/thinpad_top/thinpad_top.srcs/sim_1/new/28F640P30.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module BankLib
+INFO: [VRFC 10-311] analyzing module TimingDataModule
+INFO: [VRFC 10-311] analyzing module TimingLibModule
+INFO: [VRFC 10-311] analyzing module BlockLockModule
+INFO: [VRFC 10-311] analyzing module CFIqueryModule
+INFO: [VRFC 10-311] analyzing module DataErrorModule
+INFO: [VRFC 10-311] analyzing module ConfigRegModule
+INFO: [VRFC 10-311] analyzing module SignatureModule
+INFO: [VRFC 10-311] analyzing module CUIdecoder1
+INFO: [VRFC 10-311] analyzing module CUIdecoder2
+INFO: [VRFC 10-311] analyzing module CUIdecoder_Busy1
+INFO: [VRFC 10-311] analyzing module EraseModule
+INFO: [VRFC 10-311] analyzing module MemoryModule
+INFO: [VRFC 10-311] analyzing module OutputBufferModule
+INFO: [VRFC 10-311] analyzing module ProgramModule
+INFO: [VRFC 10-311] analyzing module BuffEnhancedFactProgramModule
+INFO: [VRFC 10-311] analyzing module ProtectRegModule
+INFO: [VRFC 10-311] analyzing module ReadModule
+INFO: [VRFC 10-311] analyzing module StatusRegModule
+INFO: [VRFC 10-311] analyzing module KernelModule
+INFO: [VRFC 10-311] analyzing module x28fxxxp30
+INFO: [VRFC 10-311] analyzing module BurstModule
+INFO: [VRFC 10-311] analyzing module BlankCheckModule
+INFO: [VRFC 10-311] analyzing module ProgramBufferModule
+INFO: [VRFC 10-311] analyzing module DebugModule
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Xilinx_pro/ALU/thinpad_top/thinpad_top.srcs/sources_1/new/FSM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module FSM
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Xilinx_pro/ALU/thinpad_top/thinpad_top.srcs/sources_1/imports/ALU/add.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module add
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Xilinx_pro/ALU/thinpad_top/thinpad_top.srcs/sources_1/imports/ALU/alu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Xilinx_pro/ALU/thinpad_top/thinpad_top.srcs/sim_1/new/clock.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clock
+WARNING: [VRFC 10-1315] redeclaration of ansi port clk_50M is not allowed [E:/Xilinx_pro/ALU/thinpad_top/thinpad_top.srcs/sim_1/new/clock.v:8]
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Xilinx_pro/ALU/thinpad_top/thinpad_top.srcs/sim_1/new/sram_model.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sram_model
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Xilinx_pro/ALU/thinpad_top/thinpad_top.srcs/sources_1/imports/ALU/sub.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sub
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Xilinx_pro/ALU/thinpad_top/thinpad_top.srcs/sources_1/new/thinpad_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module thinpad_top
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Xilinx_pro/ALU/thinpad_top/thinpad_top.srcs/sources_1/imports/ALU/two_and.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module two_and
+ERROR: [VRFC 10-1103] net type must be explicitly specified for 'a' when default_nettype is none [E:/Xilinx_pro/ALU/thinpad_top/thinpad_top.srcs/sources_1/imports/ALU/two_and.v:23]
+ERROR: [VRFC 10-1145] non-net port a cannot be of mode input [E:/Xilinx_pro/ALU/thinpad_top/thinpad_top.srcs/sources_1/imports/ALU/two_and.v:23]
+ERROR: [VRFC 10-1103] net type must be explicitly specified for 'b' when default_nettype is none [E:/Xilinx_pro/ALU/thinpad_top/thinpad_top.srcs/sources_1/imports/ALU/two_and.v:24]
+ERROR: [VRFC 10-1145] non-net port b cannot be of mode input [E:/Xilinx_pro/ALU/thinpad_top/thinpad_top.srcs/sources_1/imports/ALU/two_and.v:24]
+ERROR: [VRFC 10-2787] module two_and ignored due to previous errors [E:/Xilinx_pro/ALU/thinpad_top/thinpad_top.srcs/sources_1/imports/ALU/two_and.v:22]
+INFO: [VRFC 10-163] Analyzing VHDL file "E:/Xilinx_pro/ALU/thinpad_top/thinpad_top.srcs/sources_1/imports/alu_vhdl/two_not.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity two_not
+INFO: [VRFC 10-163] Analyzing VHDL file "E:/Xilinx_pro/ALU/thinpad_top/thinpad_top.srcs/sources_1/imports/alu_vhdl/two_rol.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity two_rol
+INFO: [VRFC 10-163] Analyzing VHDL file "E:/Xilinx_pro/ALU/thinpad_top/thinpad_top.srcs/sources_1/imports/alu_vhdl/two_sll.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity two_sll
+INFO: [VRFC 10-163] Analyzing VHDL file "E:/Xilinx_pro/ALU/thinpad_top/thinpad_top.srcs/sources_1/imports/alu_vhdl/two_sra.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity two_sra
+INFO: [VRFC 10-163] Analyzing VHDL file "E:/Xilinx_pro/ALU/thinpad_top/thinpad_top.srcs/sources_1/imports/alu_vhdl/two_srl.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity two_srl

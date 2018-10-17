@@ -1,0 +1,19 @@
+0.6
+2018.2
+Jun 14 2018
+20:41:02
+E:/Xilinx_pro/ALU/thinpad_top/thinpad_top.sim/sim_1/synth/timing/xsim/tb_time_synth.v,1539755666,verilog,,E:/Xilinx_pro/ALU/thinpad_top/thinpad_top.srcs/sim_1/new/28F640P30.v,,FSM;add;alu;glbl;sub;thinpad_top,,,../../../../../thinpad_top.srcs/sim_1/new/include,,,,,
+E:/Xilinx_pro/ALU/thinpad_top/thinpad_top.srcs/sim_1/new/28F640P30.v,1539323041,verilog,,E:/Xilinx_pro/ALU/thinpad_top/thinpad_top.srcs/sim_1/new/clock.v,E:/Xilinx_pro/ALU/thinpad_top/thinpad_top.srcs/sim_1/new/include/def.h;E:/Xilinx_pro/ALU/thinpad_top/thinpad_top.srcs/sim_1/new/include/CUIcommandData.h;E:/Xilinx_pro/ALU/thinpad_top/thinpad_top.srcs/sim_1/new/include/data.h;E:/Xilinx_pro/ALU/thinpad_top/thinpad_top.srcs/sim_1/new/include/UserData.h;E:/Xilinx_pro/ALU/thinpad_top/thinpad_top.srcs/sim_1/new/include/BankLib.h;E:/Xilinx_pro/ALU/thinpad_top/thinpad_top.srcs/sim_1/new/include/TimingData.h,BlankCheckModule;BlockLockModule;BuffEnhancedFactProgramModule;BurstModule;CFIqueryModule;CUIdecoder1;CUIdecoder2;CUIdecoder_Busy1;ConfigRegModule;DataErrorModule;DebugModule;EraseModule;KernelModule;MemoryModule;OutputBufferModule;ProgramBufferModule;ProgramModule;ProtectRegModule;ReadModule;SignatureModule;StatusRegModule;TimingLibModule;x28fxxxp30,,,../../../../../thinpad_top.srcs/sim_1/new/include,,,,,
+E:/Xilinx_pro/ALU/thinpad_top/thinpad_top.srcs/sim_1/new/clock.v,1539323041,verilog,,E:/Xilinx_pro/ALU/thinpad_top/thinpad_top.srcs/sim_1/new/sram_model.v,,clock,,,../../../../../thinpad_top.srcs/sim_1/new/include,,,,,
+E:/Xilinx_pro/ALU/thinpad_top/thinpad_top.srcs/sim_1/new/include/BankLib.h,1539323041,verilog,,,E:/Xilinx_pro/ALU/thinpad_top/thinpad_top.srcs/sim_1/new/include/def.h;E:/Xilinx_pro/ALU/thinpad_top/thinpad_top.srcs/sim_1/new/include/data.h;E:/Xilinx_pro/ALU/thinpad_top/thinpad_top.srcs/sim_1/new/include/UserData.h,BankLib,,,,,,,,
+E:/Xilinx_pro/ALU/thinpad_top/thinpad_top.srcs/sim_1/new/include/CUIcommandData.h,1539323041,verilog,,,,,,,,,,,,
+E:/Xilinx_pro/ALU/thinpad_top/thinpad_top.srcs/sim_1/new/include/TimingData.h,1539323041,verilog,,,E:/Xilinx_pro/ALU/thinpad_top/thinpad_top.srcs/sim_1/new/include/data.h;E:/Xilinx_pro/ALU/thinpad_top/thinpad_top.srcs/sim_1/new/include/UserData.h,TimingDataModule,,,,,,,,
+E:/Xilinx_pro/ALU/thinpad_top/thinpad_top.srcs/sim_1/new/include/UserData.h,1539323041,verilog,,,,,,,,,,,,
+E:/Xilinx_pro/ALU/thinpad_top/thinpad_top.srcs/sim_1/new/include/data.h,1539323041,verilog,,,E:/Xilinx_pro/ALU/thinpad_top/thinpad_top.srcs/sim_1/new/include/UserData.h,,,,,,,,,
+E:/Xilinx_pro/ALU/thinpad_top/thinpad_top.srcs/sim_1/new/include/def.h,1539323041,verilog,,,,,,,,,,,,
+E:/Xilinx_pro/ALU/thinpad_top/thinpad_top.srcs/sim_1/new/sram_model.v,1539323041,verilog,,E:/Xilinx_pro/ALU/thinpad_top/thinpad_top.srcs/sources_1/imports/ALU/sub.v,,sram_model,,,../../../../../thinpad_top.srcs/sim_1/new/include,,,,,
+E:/Xilinx_pro/ALU/thinpad_top/thinpad_top.srcs/sim_1/new/tb.sv,1539755536,systemVerilog,,,,tb,,,../../../../../thinpad_top.srcs/sim_1/new/include,,,,,
+,,,,,,,,,,,,,,
+E:/Xilinx_pro/ALU/thinpad_top/thinpad_top.srcs/sources_1/imports/ALU/two_and.v,1539734850,verilog,,E:/Xilinx_pro/ALU/thinpad_top/thinpad_top.srcs/sources_1/imports/ALU/two_or.v,,two_and,,,../../../../../thinpad_top.srcs/sim_1/new/include,,,,,
+E:/Xilinx_pro/ALU/thinpad_top/thinpad_top.srcs/sources_1/imports/ALU/two_or.v,1539734850,verilog,,E:/Xilinx_pro/ALU/thinpad_top/thinpad_top.srcs/sources_1/imports/ALU/two_xor.v,,two_or,,,../../../../../thinpad_top.srcs/sim_1/new/include,,,,,
+E:/Xilinx_pro/ALU/thinpad_top/thinpad_top.srcs/sources_1/imports/ALU/two_xor.v,1539734850,verilog,,,,two_xor,,,../../../../../thinpad_top.srcs/sim_1/new/include,,,,,
