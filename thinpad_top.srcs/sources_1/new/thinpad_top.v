@@ -80,140 +80,52 @@ module thinpad_top(
     output wire video_de           //行数据有效信号，用于区分消隐区
 );
 
+assign base_ram_be_n=0;
 
-/* =========== Demo code begin =========== */
+reg ctrl;
+wire succ;
+reg[1:0] mode;
 
-// PLL分频示例
-//wire locked, clk_10M, clk_20M;
-//pll_example clock_gen 
-// (
-//  // Clock out ports
-//  .clk_out1(clk_10M), // 时钟输出1，频率在IP配置界面中设置
-//  .clk_out2(clk_20M), // 时钟输出2，频率在IP配置界面中设置
-//  // Status and control signals
-//  .reset(reset_btn), // PLL复位输入
-//  .locked(locked), // 锁定输出，"1"表示时钟稳定，可作为后级电路复位
-// // Clock in ports
-//  .clk_in1(clk_50M) // 外部时钟输入
-// );
+assign dpy0[7]=succ;
 
-//reg reset_of_clk10M;
-//// 异步复位，同步释放
-//always@(posedge clk_10M or negedge locked) begin
-//    if(~locked) reset_of_clk10M <= 1'b1;
-//    else        reset_of_clk10M <= 1'b0;
-//end
-
-//always@(posedge clk_10M or posedge reset_of_clk10M) begin
-//    if(reset_of_clk10M)begin
-//        // Your Code
-//    end
-//    else begin
-//        // Your Code
-//    end
-//end
-
-// 数码管连接关系示意图，dpy1同理
-// p=dpy0[0] // ---a---
-// c=dpy0[1] // |     |
-// d=dpy0[2] // f     b
-// e=dpy0[3] // |     |
-// b=dpy0[4] // ---g---
-// a=dpy0[5] // |     |
-// f=dpy0[6] // e     c
-// g=dpy0[7] // |     |
-//           // ---d---  p
-
-// 7段数码管译码器演示，将number用16进制显示在数码管上面
-reg[7:0] number;
-SEG7_LUT segL(.oSEG1(dpy0), .iDIG(number[3:0])); //dpy0是低位数码管
-SEG7_LUT segH(.oSEG1(dpy1), .iDIG(number[7:4])); //dpy1是高位数码管
-
-//reg[15:0] led_bits="1111111111111111";
-assign leds = 2147483645;
-assign base_ram_ce_n=1;
-
-
-//always@(posedge clock_btn or posedge reset_btn) begin
-//    if(reset_btn)begin //复位按下，设置LED和数码管为初始值
-//        number<=0;
-//        led_bits <= 16'h1;
-//    end
-//    else begin //每次按下时钟按钮，数码管显示值加1，LED循环左移
-//        number <= number+1;
-//        led_bits <= {led_bits[14:0],led_bits[15]};
-//    end
-//end
-
-//直连串口接收发送演示，从直连串口收到的数据再发送出去
-wire [7:0] ext_uart_rx;
-reg  [7:0] ext_uart_buffer, ext_uart_tx;
-wire ext_uart_ready, ext_uart_busy;
-reg ext_uart_start, ext_uart_avai;
-
-//async_receiver #(.ClkFrequency(50000000),.Baud(9600)) //接收模块，9600无检验位
-//    ext_uart_r(
-//        .clk(clk_50M),                       //外部时钟信号
-//        .RxD(rxd),                           //外部串行信号输入
-//        .RxD_data_ready(ext_uart_ready),  //数据接收到标志
-//        .RxD_clear(ext_uart_ready),       //清除接收标志
-//        .RxD_data(ext_uart_rx)             //接收到的一字节数据
-//    );
-
-assign uart_rdn=1;
-assign uart_wrn=0;
-always @(posedge clk_50M) begin //接收到缓冲区ext_uart_buffer
-    if(uart_dataready)begin
-//        ext_uart_buffer<= ext_uart_rx;
-        ext_uart_buffer<= base_ram_data[7:0];
-    end
+always@(succ) begin
+    ctrl<=succ;
 end
 
-reg[7:0] midreg;
-assign base_ram_data[7:0]=midreg;
+reg[31:0] in_data;
+wire[31:0] out_data;
+assign leds=out_data;
+reg[31:0] in_addr;
 
-always @(posedge clock_btn) begin //接收到缓冲区ext_uart_buffer
-    if(clock_btn)begin
-//        ext_uart_buffer<= ext_uart_rx;
-        midreg<=dip_sw[7:0];
-    end
+always@(negedge succ) begin
+    mode<=mode+1;
+    in_addr<=20'h00000;
+end
+always@(posedge succ) begin
+     in_data<=out_data;
 end
 
-always@(ext_uart_buffer)begin
-    number<=ext_uart_buffer;
-end
-//always @(posedge clk_50M) begin //将缓冲区ext_uart_buffer发送出去
-//    if(!ext_uart_busy && ext_uart_avai)begin 
-//        ext_uart_tx <= ext_uart_buffer;
-//        ext_uart_start <= 1;
-//    end else begin 
-//        ext_uart_start <= 0;
-//    end
-//end
+Ctrl_SRAM_UART controller(
+    .uart_rdn(uart_rdn),
+    .uart_wrn(uart_wrn),
+    .uart_dataready(uart_dataready),
+    .uart_tbre(uart_tbre),
+    .uart_tsre(uart_tsre),
 
-//async_transmitter #(.ClkFrequency(50000000),.Baud(9600)) //发送模块，9600无检验位
-//    ext_uart_t(
-//        .clk(clk_50M),                  //外部时钟信号
-//        .TxD(txd),                      //串行信号输出
-//        .TxD_busy(ext_uart_busy),       //发送器忙状态指示
-//        .TxD_start(ext_uart_start),    //开始发送信号
-//        .TxD_data(ext_uart_tx)        //待发送的数据
-//    );
-
-//图像输出演示，分辨率800x600@75Hz，像素时钟为50MHz
-//wire [11:0] hdata;
-//assign video_red = hdata < 266 ? 3'b111 : 0; //红色竖条
-//assign video_green = hdata < 532 && hdata >= 266 ? 3'b111 : 0; //绿色竖条
-//assign video_blue = hdata >= 532 ? 2'b11 : 0; //蓝色竖条
-//assign video_clk = clk_50M;
-//vga #(12, 800, 856, 976, 1040, 600, 637, 643, 666, 1, 1) vga800x600at75 (
-//    .clk(clk_50M), 
-//    .hdata(hdata), //横坐标
-//    .vdata(),      //纵坐标
-//    .hsync(video_hsync),
-//    .vsync(video_vsync),
-//    .data_enable(video_de)
-//);
-/* =========== Demo code end =========== */
+    .ram_data(base_ram_data),
+    .ram_addr(base_ram_addr),
+    .ram_CE(base_ram_ce_n),
+    .ram_OE(base_ram_oe_n),
+    .ram_WE(base_ram_we_n),
+    
+    .clk(clk_50M),
+    .rst(reset_btn),
+    .ctrl(ctrl),
+    .mode(mode),
+    .in(in_data),
+    .in_addr(in_addr),
+    .out(out_data),
+    .succ(succ)
+);
 
 endmodule

@@ -1,8 +1,8 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date             : Tue Oct 30 22:10:13 2018
-| Host             : LAPTOP-98AM3G01 running 64-bit major release  (build 9200)
+| Date             : Wed Oct 31 19:08:13 2018
+| Host             : SKY-20170207CJV running 64-bit Service Pack 1  (build 7601)
 | Command          : report_power -file thinpad_top_power_routed.rpt -pb thinpad_top_power_summary_routed.pb -rpx thinpad_top_power_routed.rpx
 | Design           : thinpad_top
 | Device           : xc7a100tfgg676-2L
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.108        |
+| Total On-Chip Power (W)  | 0.107        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.011        |
+| Dynamic (W)              | 0.010        |
 | Device Static (W)        | 0.097        |
 | Effective TJA (C/W)      | 2.6          |
 | Max Ambient (C)          | 99.7         |
@@ -53,15 +53,14 @@ Table of Contents
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
 | Clocks         |    <0.001 |        4 |       --- |             --- |
-| Slice Logic    |    <0.001 |       33 |       --- |             --- |
-|   LUT as Logic |    <0.001 |        8 |     63400 |            0.01 |
-|   BUFG         |    <0.001 |        1 |        32 |            3.13 |
-|   Register     |    <0.001 |       16 |    126800 |            0.01 |
-|   Others       |     0.000 |        2 |       --- |             --- |
-| Signals        |    <0.001 |       41 |       --- |             --- |
-| I/O            |     0.011 |      160 |       300 |           53.33 |
+| Slice Logic    |    <0.001 |       76 |       --- |             --- |
+|   LUT as Logic |    <0.001 |       25 |     63400 |            0.04 |
+|   Register     |    <0.001 |       41 |    126800 |            0.03 |
+|   Others       |     0.000 |        4 |       --- |             --- |
+| Signals        |    <0.001 |       71 |       --- |             --- |
+| I/O            |     0.009 |      178 |       300 |           59.33 |
 | Static Power   |     0.097 |          |           |                 |
-| Total          |     0.108 |          |           |                 |
+| Total          |     0.107 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -72,8 +71,8 @@ Table of Contents
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
 | Vccint    |       1.000 |     0.016 |       0.001 |      0.015 |
-| Vccaux    |       1.800 |     0.019 |       0.000 |      0.018 |
-| Vcco33    |       3.300 |     0.007 |       0.003 |      0.004 |
+| Vccaux    |       1.800 |     0.018 |       0.000 |      0.018 |
+| Vcco33    |       3.300 |     0.006 |       0.002 |      0.004 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
@@ -137,12 +136,19 @@ Table of Contents
 3.1 By Hierarchy
 ----------------
 
-+-------------+-----------+
-| Name        | Power (W) |
-+-------------+-----------+
-| thinpad_top |     0.011 |
-|   segH      |    <0.001 |
-|   segL      |    <0.001 |
-+-------------+-----------+
++-------------------------------+-----------+
+| Name                          | Power (W) |
++-------------------------------+-----------+
+| thinpad_top                   |     0.010 |
+|   base_ram_data_IOBUF[0]_inst |    <0.001 |
+|   base_ram_data_IOBUF[1]_inst |    <0.001 |
+|   base_ram_data_IOBUF[2]_inst |    <0.001 |
+|   base_ram_data_IOBUF[3]_inst |    <0.001 |
+|   base_ram_data_IOBUF[4]_inst |    <0.001 |
+|   base_ram_data_IOBUF[5]_inst |    <0.001 |
+|   base_ram_data_IOBUF[6]_inst |    <0.001 |
+|   base_ram_data_IOBUF[7]_inst |    <0.001 |
+|   controller                  |    <0.001 |
++-------------------------------+-----------+
 
 

@@ -60,6 +60,9 @@ proc step_failed { step } {
   close $ch
 }
 
+set_msg_config -id {Common 17-41} -limit 10000000
+set_msg_config -id {Synth 8-256} -limit 10000
+set_msg_config -id {Synth 8-638} -limit 10000
 
 start_step init_design
 set ACTIVE_STEP init_design
@@ -68,14 +71,14 @@ set rc [catch {
   create_project -in_memory -part xc7a100tfgg676-2L
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
-  set_property webtalk.parent_dir {D:/3-Autumn/Organization Principles/Project3/thinpad_top/thinpad_top.cache/wt} [current_project]
-  set_property parent.project_path {D:/3-Autumn/Organization Principles/Project3/thinpad_top/thinpad_top.xpr} [current_project]
-  set_property ip_output_repo {{D:/3-Autumn/Organization Principles/Project3/thinpad_top/thinpad_top.cache/ip}} [current_project]
+  set_property webtalk.parent_dir E:/Xilinx_pro/ALU/thinpad_top.cache/wt [current_project]
+  set_property parent.project_path E:/Xilinx_pro/ALU/thinpad_top.xpr [current_project]
+  set_property ip_output_repo E:/Xilinx_pro/ALU/thinpad_top.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES XPM_CDC [current_project]
-  add_files -quiet {{D:/3-Autumn/Organization Principles/Project3/thinpad_top/thinpad_top.runs/synth_1/thinpad_top.dcp}}
-  read_ip -quiet {{D:/3-Autumn/Organization Principles/Project3/thinpad_top/thinpad_top.srcs/sources_1/ip/pll_example/pll_example.xci}}
-  read_xdc {{D:/3-Autumn/Organization Principles/Project3/thinpad_top/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc}}
+  add_files -quiet E:/Xilinx_pro/ALU/thinpad_top.runs/synth_1/thinpad_top.dcp
+  read_ip -quiet E:/Xilinx_pro/ALU/thinpad_top.srcs/sources_1/ip/pll_example/pll_example.xci
+  read_xdc E:/Xilinx_pro/ALU/thinpad_top.srcs/constrs_1/new/thinpad_top.xdc
   link_design -top thinpad_top -part xc7a100tfgg676-2L
   close_msg_db -file init_design.pb
 } RESULT]

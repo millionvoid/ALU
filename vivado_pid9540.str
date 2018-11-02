@@ -1,0 +1,114 @@
+/*
+
+Xilinx Vivado v2018.2 (64-bit) [Major: 2018, Minor: 2]
+SW Build: 2258646 on Thu Jun 14 20:03:12 MDT 2018
+IP Build: 2256618 on Thu Jun 14 22:10:49 MDT 2018
+
+Process ID: 9540
+License: Customer
+
+Current time: 	Fri Nov 02 08:00:44 CST 2018
+Time zone: 	China Standard Time (Asia/Shanghai)
+
+OS: Windows 7
+OS Version: 6.1
+OS Architecture: amd64
+Available processors (cores): 4
+
+Screen size: 1366x768
+Screen resolution (DPI): 96
+Available screens: 1
+Available disk space: 14 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	1.8.0_112 64-bit
+Java home: 	E:/Xilinx/Vivado/2018.2/tps/win64/jre
+Java executable location: 	E:/Xilinx/Vivado/2018.2/tps/win64/jre/bin/java.exe
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 2 GB
+
+
+User name: 	Administrator
+User home directory: C:/Users/Administrator
+User working directory: E:/Xilinx_pro/ALU
+User country: 	CN
+User language: 	zh
+User locale: 	zh_CN
+
+RDI_BASEROOT: E:/Xilinx/Vivado
+HDI_APPROOT: E:/Xilinx/Vivado/2018.2
+RDI_DATADIR: E:/Xilinx/Vivado/2018.2/data
+RDI_BINDIR: E:/Xilinx/Vivado/2018.2/bin
+
+Vivado preferences file location: C:/Users/Administrator/AppData/Roaming/Xilinx/Vivado/2018.2/vivado.xml
+Vivado preferences directory: C:/Users/Administrator/AppData/Roaming/Xilinx/Vivado/2018.2/
+Vivado layouts directory: C:/Users/Administrator/AppData/Roaming/Xilinx/Vivado/2018.2/layouts
+PlanAhead jar file location: 	E:/Xilinx/Vivado/2018.2/lib/classes/planAhead.jar
+Vivado log file location: 	E:/Xilinx_pro/ALU/vivado.log
+Vivado journal file location: 	E:/Xilinx_pro/ALU/vivado.jou
+Engine tmp dir: 	E:/Xilinx_pro/ALU/.Xil/Vivado-9540-SKY-20170207CJV
+
+Xilinx Environment Variables
+----------------------------
+AMDAPPSDKROOT: C:\Program Files (x86)\AMD APP\
+XILINX: E:/Xilinx/Vivado/2018.2/ids_lite/ISE
+XILINX_DSP: E:/Xilinx/Vivado/2018.2/ids_lite/ISE
+XILINX_PLANAHEAD: E:/Xilinx/Vivado/2018.2
+XILINX_SDK: E:/Xilinx/SDK/2018.2
+XILINX_VIVADO: E:/Xilinx/Vivado/2018.2
+XILINX_VIVADO_HLS: E:/Xilinx/Vivado/2018.2
+
+
+GUI allocated memory:	161 MB
+GUI max memory:		3,052 MB
+Engine allocated memory: 486 MB
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// [GUI Memory]: 15 MB (+13302kb) [00:00:05]
+// [Engine Memory]: 279 MB (+140618kb) [00:00:05]
+// [GUI Memory]: 19 MB (+2960kb) [00:00:10]
+// [GUI Memory]: 24 MB (+4658kb) [00:00:15]
+// TclEventType: START_GUI
+// [GUI Memory]: 31 MB (+6057kb) [00:00:26]
+// [Engine Memory]: 401 MB (+113664kb) [00:00:26]
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// bx (ck):  Open Project : addNotify
+// Opening Vivado Project: E:\Xilinx_pro\ALU\thinpad_top.xpr. Version: Vivado v2018.2 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// [GUI Memory]: 53 MB (+21269kb) [00:00:35]
+// [Engine Memory]: 478 MB (+60075kb) [00:00:35]
+// Tcl Message: open_project E:/Xilinx_pro/ALU/thinpad_top.xpr 
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_CURRENT
+// HMemoryUtils.trashcanNow. Engine heap size: 506 MB. GUI used memory: 33 MB. Current time: 11/2/18 8:00:46 AM CST
+// [Engine Memory]: 506 MB (+4266kb) [00:00:41]
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_NEW
+// [Engine Memory]: 545 MB (+14238kb) [00:00:49]
+// [GUI Memory]: 59 MB (+3278kb) [00:00:54]
+// Tcl Message: open_project E:/Xilinx_pro/ALU/thinpad_top.xpr 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'E:/Xilinx/Vivado/2018.2/data/ip'. 
+// HMemoryUtils.trashcanNow. Engine heap size: 581 MB. GUI used memory: 39 MB. Current time: 11/2/18 8:01:08 AM CST
+// Tcl Message: open_project: Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 762.969 ; gain = 78.977 
+// [Engine Memory]: 586 MB (+13733kb) [00:01:01]
+// Project name: thinpad_top; location: E:/Xilinx_pro/ALU; part: xc7a100tfgg676-2L
+dismissDialog("Open Project"); // bx (ck)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// [GUI Memory]: 63 MB (+1249kb) [00:03:04]
+// [GUI Memory]: 67 MB (+525kb) [00:04:44]
+// Elapsed time: 232 seconds
+maximizeFrame(PAResourceOtoP.PAViews_SOURCES, "Sources"); // aw (aE, ck)
+unMaximizeFrame(PAResourceOtoP.PAViews_SOURCES, "Sources"); // aw (aE, ck)
+// [GUI Memory]: 71 MB (+1393kb) [00:07:49]
